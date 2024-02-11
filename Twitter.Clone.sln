@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{51EB8D37-58BF-4DE1-BFBE-7AC75E895ED2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{EF7D9F9D-1E62-427C-BA75-3FAB0E57FA96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "settings", "settings", "{CD8A7DC1-F8A2-4FD6-A69D-57EF91F48AD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Clone.Settings", "Twitter.Clone.Settings\Twitter.Clone.Settings.csproj", "{F6BDC547-4594-44DE-910C-697DC93E9178}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6BDC547-4594-44DE-910C-697DC93E9178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BDC547-4594-44DE-910C-697DC93E9178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BDC547-4594-44DE-910C-697DC93E9178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BDC547-4594-44DE-910C-697DC93E9178}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF7D9F9D-1E62-427C-BA75-3FAB0E57FA96} = {51EB8D37-58BF-4DE1-BFBE-7AC75E895ED2}
+		{CD8A7DC1-F8A2-4FD6-A69D-57EF91F48AD4} = {EF7D9F9D-1E62-427C-BA75-3FAB0E57FA96}
+		{F6BDC547-4594-44DE-910C-697DC93E9178} = {CD8A7DC1-F8A2-4FD6-A69D-57EF91F48AD4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE934AA4-8012-41AC-8953-0FC3107F624F}
+	EndGlobalSection
+EndGlobal
