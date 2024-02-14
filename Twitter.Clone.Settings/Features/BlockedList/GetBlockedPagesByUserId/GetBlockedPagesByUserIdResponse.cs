@@ -2,7 +2,7 @@
 
 public class GetBlockedPagesByUserIdResponse
 {
-    public int  BlockedPageId { get; set; }
+    public Guid  BlockedPageId { get; set; }
 
 }
 

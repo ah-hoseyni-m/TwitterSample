@@ -18,7 +18,7 @@ namespace Twitter.Clone.Settings.Features.BlockedList
 
 
         [HttpGet("Blocked-Pages")]
-        public async Task<IEnumerable<GetBlockedPagesByUserIdResponse>> GetPages(int UserId)
+        public async Task<IEnumerable<GetBlockedPagesByUserIdResponse>> GetPages(Guid UserId)
         {
             GetBlockedPagesByUserIdQuery getBlockedPagesByUserIdQuery = new();
             getBlockedPagesByUserIdQuery.UserId = UserId;
@@ -26,7 +26,7 @@ namespace Twitter.Clone.Settings.Features.BlockedList
             return Result;
         }
         [HttpGet("Blocked-Users")]
-        public async Task<IEnumerable<GetBlockedUsersByUserIdResponse>> GetUsers(int UserId)
+        public async Task<IEnumerable<GetBlockedUsersByUserIdResponse>> GetUsers(Guid UserId)
         {
             GetBlockedUsersByUserIdQuery getBlockedUsersByUserIdQuery = new();
             getBlockedUsersByUserIdQuery.UserId = UserId;

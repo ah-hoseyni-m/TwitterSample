@@ -16,7 +16,7 @@ public class NotificationController : ControllerBase
     }
 
     [HttpGet()]
-    public async Task<UserNotificationsResponse> Index(int UserId)
+    public async Task<UserNotificationsResponse> Index(Guid UserId)
     {
         UserNotificationsQuery userNotificationsInput = new();
         userNotificationsInput.UserId = UserId;

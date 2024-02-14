@@ -2,5 +2,5 @@
 
 public class BlockedUser : BlockedList
 {
-    public int BlockedUserId { get; set; }
+    public Guid BlockedUserId { get; set; }
 }
