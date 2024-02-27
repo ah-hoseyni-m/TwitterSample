@@ -33,5 +33,13 @@ namespace Twitter.Clone.Settings.Features.BlockedList
             var Result = await mediator.Send(getBlockedUsersByUserIdQuery);
             return Result;
         }
+        [HttpGet("Blocked-Users")]
+        public async Task<bool> GetIsBlocked(List< Guid> UserIds)
+        {
+            GetIsBlockedByUserIdsQuery getIsBlockedByUserIdsQuery = new();
+            getIsBlockedByUserIdsQuery.UserIds = UserIds;
+            var Result = await mediator.Send(getIsBlockedByUserIdsQuery);
+            return Result;
+        }
     }
 }
