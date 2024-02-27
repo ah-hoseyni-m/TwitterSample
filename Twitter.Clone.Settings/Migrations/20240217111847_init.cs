@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Twitter.Clone.Settings.Migrations
 {
     /// <inheritdoc />
-    public partial class addBlokList : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,8 +17,8 @@ namespace Twitter.Clone.Settings.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BlockedPageId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    BlockedPageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,8 +31,8 @@ namespace Twitter.Clone.Settings.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BlockedUserId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    BlockedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,7 +43,7 @@ namespace Twitter.Clone.Settings.Migrations
                 name: "EmailNotificationSetting",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Mention = table.Column<bool>(type: "bit", nullable: false),
                     DirectMessage = table.Column<bool>(type: "bit", nullable: false),
                     Following = table.Column<bool>(type: "bit", nullable: false),
@@ -57,7 +58,7 @@ namespace Twitter.Clone.Settings.Migrations
                 name: "PushNotificationSetting",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Mention = table.Column<bool>(type: "bit", nullable: false),
                     DirectMessage = table.Column<bool>(type: "bit", nullable: false),
                     Following = table.Column<bool>(type: "bit", nullable: false),
@@ -72,7 +73,7 @@ namespace Twitter.Clone.Settings.Migrations
                 name: "SmsNotificationSetting",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     PasswordChange = table.Column<bool>(type: "bit", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
