@@ -12,7 +12,6 @@ builder.Services.AddDbContext<SettingsDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
 });
 
-
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 builder.Services.AddControllers();
@@ -32,7 +31,6 @@ else
 {
     app.UseCustomExceptionHandler();
 }
-
 
 app.UseHttpsRedirection();
 

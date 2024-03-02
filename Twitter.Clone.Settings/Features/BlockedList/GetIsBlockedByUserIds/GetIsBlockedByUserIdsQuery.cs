@@ -10,6 +10,5 @@ public class GetIsBlockedByUserIdsQuery : IRequest<bool>
 public class GetIsBlockedByUserIdsResponse
 {
     public Guid BlockedUserId { get; set; }
-
 }
 
