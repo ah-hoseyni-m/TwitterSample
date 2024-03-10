@@ -17,16 +17,16 @@ namespace Twitter.Clone.Settings.Features.BlockedList.GetBlockedUsersByUserId
 
         public async Task<bool> Handle(GetIsBlockedByUserIdsQuery request, CancellationToken cancellationToken)
         {
-            //foreach (var item in request.UserIds)
-            //{
-            //    int count =  _dbContext.BlockedUsers.TakeWhile(x => x.UserId == item && request.UserIds.Contains( x.BlockedUserId)).Count();
-            //    if (count > 1) return false;
-            //}
-            for (int i = 0; i < request.UserIds.Count; i++)
+            foreach (var item in request.UserIds)
             {
-                int count = _dbContext.BlockedUsers.TakeWhile(x => x.UserId == request.UserIds[i] && request.UserIds.Contains(x.BlockedUserId)).Count();
+                int count = _dbContext.BlockedUsers.TakeWhile(x => x.UserId == item && request.UserIds.Contains(x.BlockedUserId)).Count();
                 if (count > 1) return false;
             }
+            //for (int i = 0; i < request.UserIds.Count; i++)
+            //{
+            //    int count = _dbContext.BlockedUsers.TakeWhile(x => x.UserId == request.UserIds[i] && request.UserIds.Contains(x.BlockedUserId)).Count();
+            //    if (count > 1) return false;
+            //}
             return true;
         }
     }
